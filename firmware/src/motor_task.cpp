@@ -194,14 +194,14 @@ void MotorTask::run() {
                 }
                 case CommandType::HAPTIC: {
                     // Play a hardcoded haptic "click"
-                    float strength = command.data.haptic.press ? 5 : 1.5;
+                    float strength = command.data.haptic.press ? 1.5 : 1.5;
                     motor.move(strength);
-                    for (uint8_t i = 0; i < 3; i++) {
+                    for (uint8_t i = 0; i < 8; i++) {
                         motor.loopFOC();
                         delay(1);
                     }
                     motor.move(-strength);
-                    for (uint8_t i = 0; i < 3; i++) {
+                    for (uint8_t i = 0; i < 8; i++) {
                         motor.loopFOC();
                         delay(1);
                     }
