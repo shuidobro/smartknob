@@ -11,6 +11,7 @@
     "editor.formatOnSaveMode": "file",
     "files.associations": {
         "cstddef": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "vector": "cpp"
     },
 }
